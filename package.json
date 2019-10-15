@@ -1,0 +1,10 @@
+{
+  "name": "birdbrain",
+  "version": "1.0.0",
+  "description": "Submission to Birdbrain",
+  "main": "main.js",
+  "repository": "https://github.com/Robbozinoz/birdbrain.git",
+  "author": "John Robertson",
+  "license": "MIT",
+  "private": true
+}
