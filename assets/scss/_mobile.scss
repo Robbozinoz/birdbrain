@@ -1,0 +1,45 @@
+//Horizontal layout on mobile phones and smaller
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about {
+        grid-template-areas:
+            "birdbrain-1"
+            "the-technology"
+            "why-birdbrain"
+            "birdbrain-2"
+            "birdbrain-3"
+            "our-dream-team-member"
+            "contact-us"
+            "birdbrain-4";
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+//Tablets medium o large size
+@include mediaLg {
+    main {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about {
+        grid-template-areas:
+            "birdbrain-1"
+            "the-technology"
+            "why-birdbrain"
+            "birdbrain-2"
+            "birdbrain-3"
+            "our-dream-team-member"
+            "contact-us"
+            "birdbrain-4";
+        grid-template-columns: 1fr;
+    }
+}

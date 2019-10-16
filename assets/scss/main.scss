@@ -1,0 +1,57 @@
+@import "config";
+
+.about {
+    display: grid;
+    background: lightskyblue;
+    /*Keep for final responsive styling
+    padding: 1.5rem;*/
+    grid-template-areas: "birdbrain-1 the-technology""why-birdbrain birdbrain-2""birdbrain-3 our-dream-team-member""contact-us birdbrain-4";
+    grid-template-columns: repeat(2, 1fr);
+
+    .the-technology {
+        grid-area: the-technology;
+        font-size: 1.15rem;
+    }
+
+    .birdbrain-1 {
+        grid-area: birdbrain-1;
+    }
+
+    .why-birdbrain {
+        grid-area: why-birdbrain;
+        font-size: 1.15rem;
+    }
+
+    .birdbrain-2 {
+        grid-area: birdbrain-2;
+    }
+
+    .our-dream-team-member {
+        grid-area: our-dream-team-member;
+        font-size: 1.15rem;
+    }
+
+    .birdbrain-3 {
+        grid-area: birdbrain-3;
+    }
+
+    .contact-us {
+        grid-area: contact-us;
+        font-size: 1.15rem;
+    }
+
+    .birdbrain-4 {
+        grid-area: birdbrain-4;
+    }
+
+    /*Styleing for grid template areas*/
+    .about-bird {
+        background: lightgray;
+        padding: 1.5rem;
+        border-bottom: red solid 2px;
+        ;
+    }
+}
+
+/*Settings for mobile and tablet*/
+@import "mobile";

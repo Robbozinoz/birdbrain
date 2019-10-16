@@ -1,0 +1,51 @@
+.about {
+  display: grid;
+  background: lightskyblue;
+  /*Keep for final responsive styling
+    padding: 1.5rem;*/
+  grid-template-areas: "birdbrain-1 the-technology" "why-birdbrain birdbrain-2" "birdbrain-3 our-dream-team-member" "contact-us birdbrain-4";
+  grid-template-columns: repeat(2, 1fr);
+  /*Styleing for grid template areas*/ }
+  .about .the-technology {
+    grid-area: the-technology;
+    font-size: 1.15rem; }
+  .about .birdbrain-1 {
+    grid-area: birdbrain-1; }
+  .about .why-birdbrain {
+    grid-area: why-birdbrain;
+    font-size: 1.15rem; }
+  .about .birdbrain-2 {
+    grid-area: birdbrain-2; }
+  .about .our-dream-team-member {
+    grid-area: our-dream-team-member;
+    font-size: 1.15rem; }
+  .about .birdbrain-3 {
+    grid-area: birdbrain-3; }
+  .about .contact-us {
+    grid-area: contact-us;
+    font-size: 1.15rem; }
+  .about .birdbrain-4 {
+    grid-area: birdbrain-4; }
+  .about .about-bird {
+    background: lightgray;
+    padding: 1.5rem;
+    border-bottom: red solid 2px; }
+
+/*Settings for mobile and tablet*/
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+  .about {
+    grid-template-areas: "birdbrain-1" "the-technology" "why-birdbrain" "birdbrain-2" "birdbrain-3" "our-dream-team-member" "contact-us" "birdbrain-4";
+    grid-template-columns: 1fr; }
+  img {
+    width: 80%; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  main {
+    align-items: center;
+    text-align: center; }
+  .about {
+    grid-template-areas: "birdbrain-1" "the-technology" "why-birdbrain" "birdbrain-2" "birdbrain-3" "our-dream-team-member" "contact-us" "birdbrain-4";
+    grid-template-columns: 1fr; } }
