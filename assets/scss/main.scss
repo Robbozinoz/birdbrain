@@ -1,8 +1,53 @@
 @import "config";
+@import "menu";
+
+body {
+
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+//Headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 4rem;
+    //Sticky footer calc function
+    min-height: calc(100vh - 60px);
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+            color: $secondary-color;
+
+            &:hover {
+                color: $tertiary-color;
+                @include ease-out();
+            }
+        }
+    }
+}
 
 .about {
     display: grid;
-    background: lightskyblue;
+    /*background: lightskyblue;*/
     /*Keep for final responsive styling
     padding: 1.5rem;*/
     grid-template-areas: "birdbrain-1 the-technology""why-birdbrain birdbrain-2""birdbrain-3 our-dream-team-member""contact-us birdbrain-4";
@@ -46,12 +91,14 @@
 
     /*Styleing for grid template areas*/
     .about-bird {
-        background: lightgray;
+        background: none;
         padding: 1.5rem;
         border-bottom: red solid 2px;
         ;
     }
 }
+
+
 
 /*Settings for mobile and tablet*/
 @import "mobile";
