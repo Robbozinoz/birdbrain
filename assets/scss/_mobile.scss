@@ -23,6 +23,7 @@
     }
 }
 
+
 //Tablets medium o large size
 @include mediaLg {
     main {
@@ -42,5 +43,12 @@
             "birdbrain-4";
 
         grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width:30em) {
+    .menu-btn {
+        display: block;
+        margin: 0.4em auto;
     }
 }

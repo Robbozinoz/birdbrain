@@ -1,11 +1,12 @@
 $primary-color: #fff;
-$secondary-color: #597fff;
-$tertiary-color: #FFD259;
+$secondary-color: #62b4fd;
+$tertiary-color: #27a2fb;
 $background-opacity: 0.75;
 /*#b3d8fb
 #89c6fc
 #62b4fd
-#27a2fb*/
+#27a2fb
+4F90C9*/
 
 @mixin mediaLg {
     @media screen and (min-width: 769px) and (max-width: 1170px) {

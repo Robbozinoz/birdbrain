@@ -1,24 +1,27 @@
 //Menu button
 .menu-btn {
+  position: absolute;
   color: $secondary-color;
+  right: 2em;
+  top: 1em;
   z-index: 3;
   cursor: pointer;
+  padding: 0.5em 1.5em;
+  border: 0.1em solid #31597D;
+  margin: 0 0.5em 0.5em 0;
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
   @include ease-out();
 
-  .btn-line {
-    width: 28px;
-    height: 3px;
-    margin: 0 0 5px 0;
-    background: set-text-color($primary-color);
-    @include ease-out();
-  }
-
-  //Rotate into X with menu lines
-  &.close {
-    transform: rotate(180deg);
+  &:hover {
+    color: #000000;
+    background-color: $primary-color;
   }
 }
-
 
 //Menu overlay
 .menu {
@@ -45,7 +48,6 @@
     width: 50%;
     height: 100vh;
     overflow: hidden;
-
   }
 
   &-nav {
@@ -63,7 +65,7 @@
     }
   }
 
-  //BRanding
+  //Branding
   &-branding {
     background: $primary-color;
     @include ease-out;
@@ -81,7 +83,7 @@
       color: $secondary-color;
       background: url(../img/origami-lg.png) center no-repeat;
       border-radius: 50%;
-      border: solid 3px $secondary-color;
+      border: solid 3px $tertiary-color;
     }
   }
 
@@ -107,7 +109,7 @@
   .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-family: 'Ubuntu', sans-serif;
     /*padding: 1rem 0;*/
     font-weight: 400;
@@ -126,4 +128,12 @@
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
+}
+
+footer {
+  padding: 0.5em;
+}
+
+.footer-icons {
+  float: right;
 }
