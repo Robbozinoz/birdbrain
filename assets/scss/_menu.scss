@@ -1,4 +1,4 @@
-//Menu button
+//----------------Menu button--------------------
 .menu-btn {
   position: absolute;
   color: $secondary-color;
@@ -7,7 +7,7 @@
   z-index: 3;
   cursor: pointer;
   padding: 0.5em 1.5em;
-  border: 0.1em solid #31597D;
+  border: 0.1em solid $chromatic1-color;
   margin: 0 0.5em 0.5em 0;
   border-radius: 0.25em;
   box-sizing: border-box;
@@ -23,7 +23,7 @@
   }
 }
 
-//Menu overlay
+//--------------Menu overlay--------------
 .menu {
   position: fixed;
   background: $secondary-color;
@@ -31,13 +31,15 @@
   top: 0;
   width: 100%;
   opacity: 1;
+  /*Set as hidden by default*/
   visibility: hidden;
 
-
+  /*For the ToggleMenu js function*/
   &.show {
     visibility: visible;
   }
 
+  /*Ensure content of menu are centered and visible*/
   &-branding,
   &-nav {
     display: flex;
@@ -50,6 +52,7 @@
     overflow: hidden;
   }
 
+  /*Keep menu off screen until ToggleMenu event is triggered*/
   &-nav {
     margin: 0;
     padding: 0;
@@ -65,7 +68,7 @@
     }
   }
 
-  //Branding
+  //----Brand and logo on left of menu------
   &-branding {
     background: $primary-color;
     @include ease-out;
@@ -92,6 +95,7 @@
     padding: 0.5em;
   }
 
+  /*Initiate items sliding in from off screen on Toggle Menu*/
   .nav-item {
     transform: translate3d(600px, 0, 0);
     @include ease-out;
@@ -111,9 +115,8 @@
     position: relative;
     font-size: 1.25rem;
     font-family: 'Ubuntu', sans-serif;
-    /*padding: 1rem 0;*/
     font-weight: 400;
-    color: $secondary-color;
+    color: $chromatic2-color;
     text-decoration: none;
     @include ease-out;
 
@@ -123,17 +126,9 @@
   }
 }
 
-//Delay each nav item slide by 0.1s
+/*-----Delay each nav item slide by 0.1s----*/
 @for $x from 1 through 7 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
-}
-
-footer {
-  padding: 0.5em;
-}
-
-.footer-icons {
-  float: right;
 }

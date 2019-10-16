@@ -2,7 +2,6 @@
 @import "menu";
 
 body {
-
     background: $primary-color;
     color: set-text-color($primary-color);
     height: 100%;
@@ -11,7 +10,7 @@ body {
     line-height: 1.5;
 }
 
-//Headings
+//-----------Headings---------------
 h1,
 h2,
 h3 {
@@ -21,50 +20,50 @@ h3 {
 }
 
 a {
-    color: #fff;
+    color: $tertiary-color;
     text-decoration: none;
 }
 
 
+//----------Main banner imagery and styles----------
 .hero {
-    background: #b3d8fb;
+    background: $quaternary-color;
     background-image: url(../img/birdbrain.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 20vh;
     padding: 2em;
+
+    h1 {
+        padding: 1em;
+        text-align: center;
+    }
 }
 
 main {
     padding: 4rem;
 
+
     .powerful-intro {
         background: none;
         padding: 1.5rem;
-        border-bottom: #62b4fd solid 2px;
-    }
+        border-bottom: $secondary-color solid 2px;
 
-    .icons {
-        margin-top: 1rem;
+        h2 {
+            color: $chromatic1-color;
+            font-weight: 600;
+        }
 
-        a {
-            padding: 0.4rem;
-            color: $secondary-color;
-
-            &:hover {
-                color: $tertiary-color;
-                @include ease-out();
-            }
+        p {
+            color: $chromatic1-color
         }
     }
 }
 
+//-------Styling for the CSS grid , template---------------
 .about {
     display: grid;
-    /*background: lightskyblue;*/
-    /*Keep for final responsive styling
-    padding: 1.5rem;*/
     grid-template-areas: "birdbrain-1 the-technology""why-birdbrain birdbrain-2""birdbrain-3 our-dream-team-member""contact-us birdbrain-4";
     grid-template-columns: repeat(2, 1fr);
 
@@ -112,9 +111,28 @@ main {
     }
 }
 
+
+//-----------Footer styles-----------------
 footer {
-    background: #b3d8fb;
+    background: $quaternary-color;
+    padding: 0.5em;
+
+    .footer-icons {
+        margin-top: 1rem;
+        float: right;
+    }
+
+    a {
+        padding: 0.4rem;
+        color: $secondary-color;
+
+        &:hover {
+            color: $chromatic1-color;
+            @include ease-out();
+        }
+    }
 }
+
 
 /*Settings for mobile and tablet*/
 @import "mobile";

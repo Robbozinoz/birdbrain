@@ -2,11 +2,10 @@ $primary-color: #fff;
 $secondary-color: #62b4fd;
 $tertiary-color: #27a2fb;
 $background-opacity: 0.75;
-/*#b3d8fb
-#89c6fc
-#62b4fd
-#27a2fb
-4F90C9*/
+$quaternary-color: #b3d8fb;
+$chromatic1-color: #31597D;
+$chromatic2-color: #566B7D;
+
 
 @mixin mediaLg {
     @media screen and (min-width: 769px) and (max-width: 1170px) {
@@ -20,6 +19,7 @@ $background-opacity: 0.75;
     }
 }
 
+/*Main transition effect for site*/
 @mixin ease-out {
     transition: all 0.5s ease-out;
 }

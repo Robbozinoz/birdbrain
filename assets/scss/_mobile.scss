@@ -5,6 +5,7 @@
         text-align: center;
     }
 
+    /*Change template grid to one column for mobile*/
     .about {
         grid-template-areas:
             "birdbrain-1"
@@ -24,13 +25,14 @@
 }
 
 
-//Tablets medium o large size
+//Tablets medium to large size
 @include mediaLg {
     main {
         align-items: center;
         text-align: center;
     }
 
+    /*Change template grid to one column for tablet*/
     .about {
         grid-template-areas:
             "birdbrain-1"
@@ -43,12 +45,5 @@
             "birdbrain-4";
 
         grid-template-columns: 1fr;
-    }
-}
-
-@media all and (max-width:30em) {
-    .menu-btn {
-        display: block;
-        margin: 0.4em auto;
     }
 }
